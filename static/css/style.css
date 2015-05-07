@@ -1,0 +1,11 @@
+/* line 3, ../scss/style.scss */
+body {
+  font-size: 100%;
+}
+
+/* line 7, ../scss/style.scss */
+header {
+  width: 100%;
+  min-height: 100px;
+  border-bottom: 1px solid #666;
+}
