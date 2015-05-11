@@ -10,11 +10,26 @@ body {
   font-size: 100%;
 }
 
+div#view {
+  @include display-flex;
+  @include flex-direction(column);
+  height: 100vh;
+}
+
+div#main {
+  flex: 1;
+}
+
+footer {
+  min-height: 100px;
+  background-color: $color-secondary-1-0;
+}
+
 header {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
+  @include display-flex;
+  @include flex-direction(row);
+  @include justify-content('center');
+  @include align-items('center');
   background-color: $color-primary-1;
   align-content: center;
   border-bottom: 3px dotted $color-primary-2;
