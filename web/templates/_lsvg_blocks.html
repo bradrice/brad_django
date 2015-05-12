@@ -1,0 +1,8 @@
+{% block svg_blocks %}
+    {% for i in p_loop_times %}
+    <svg version="1.1" id="b%s" class="box" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 10 10" enable-background="new 0 0 10 10" xml:space="preserve">
+	<rect fill="%s" width="10" height="10"/>
+	</svg>
+    {% endfor %}
+{% endblock %}

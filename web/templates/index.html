@@ -3,7 +3,24 @@
 {% block title %}{{ title }}{% endblock %}
 
 {% block content %}
-<h1>{{ title }}</h1>
-
-
+{%  load staticfiles %}
+    <div id="lblocks">
+     {% block svg_blocks %}
+    {% for obj in p_list %}
+    <svg version="1.1" id="b{{obj.item}}" class="box" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 10 10" enable-background="new 0 0 10 10" xml:space="preserve">
+    <defs>
+    <filter id="blurFilter4" x="-5" y="-5" width="5" height="5">
+        <feGaussianBlur in="SourceGraphic" stdDeviation="10" />
+    </filter>
+</defs>
+	<rect fill="{{ obj.color }}" width="10" height="10" url(#blurFilter4); />
+	</svg>
+    {% endfor %}
+{% endblock %}
+    </div>
+    <div id="personal">Brad's personal info</div>
+    <div id="rblocks">
+   {% include '_rsvg_blocks.html' %}
+    </div>
 {% endblock %}

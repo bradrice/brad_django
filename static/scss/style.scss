@@ -1,6 +1,14 @@
-@import 'compass';
 @import 'compass/reset';
+@import 'compass';
 @import 'variables';
+@import 'susy';
+
+$susy: (
+  columns: 12,
+  gutter: 1/8,
+  math: fluid,
+  output: float,
+);
 
 html {
   @include box-sizing;
@@ -17,8 +25,32 @@ div#view {
 }
 
 div#main {
-  flex: 1;
+  @include flex(1);
+  @include justify-content(flex-start);
+  width: span(12);
+  overflow: hidden;
 }
+
+div.container {
+  @include display-flex;
+  @include flex-direction(row);
+  @include justify-content(flex-start);
+  @include align-content(stretch);
+}
+
+div#lblocks {
+ @include flex(2 0 0);
+}
+
+div#personal {
+  @include flex(6 0 0);
+  padding: 1em;
+}
+
+div#rblocks {
+  @include flex(1 0 0);
+}
+
 
 footer {
   min-height: 100px;
@@ -28,12 +60,22 @@ footer {
 header {
   @include display-flex;
   @include flex-direction(row);
-  @include justify-content('center');
-  @include align-items('center');
+  @include justify-content(center);
+  @include align-items(center);
   background-color: $color-primary-1;
-  align-content: center;
-  border-bottom: 3px dotted $color-primary-2;
+  @include align-content(center);
+  border-bottom: 10px dotted $color-primary-2;
   .site_head {
     margin: 1em;
   }
 }
+
+svg.box {
+  width: 10px;
+  height: 10px;
+  margin: 0px;
+}
+
+
+
+
