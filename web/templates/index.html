@@ -9,13 +9,13 @@
          {% block svg_blocks %}
     {% for obj in p_list %}
     <svg version="1.1" id="lb{{obj.item}}" class="box" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 10 10" enable-background="new 0 0 10 10" xml:space="preserve">
+	 viewBox="0 0 20 20" enable-background="new 0 0 20 20" xml:space="preserve">
     <defs>
-    <filter id="blurFilter4" x="-5" y="-5" width="5" height="5">
+    <filter id="blurFilter4" x="-5" y="-5" width="20" height="20">
         <feGaussianBlur in="SourceGraphic" stdDeviation="10" />
     </filter>
 </defs>
-	<rect fill="{{ obj.color }}" width="10" height="10" id="lr{{ obj.item }}" url(#blurFilter4); />
+	<rect fill="{{ obj.color }}" width="20" height="20" id="lr{{ obj.item }}" url(#blurFilter4); />
 	</svg>
     {% endfor %}
 {% endblock %}
@@ -34,12 +34,15 @@
     <script type="text/javascript">
 $(document).ready(function(){
 $(".box").on('mouseover', function(){
+    var parentel = $(this);
     var els = $(this.getElementsByTagName('rect'));
     var el = els.get(0);
 {#    console.log(el);#}
     var thisclr = el.getAttribute('fill');
-    var newclr = shadeColor1(thisclr, 30);
+    var newclr = shadeColor1(thisclr, 10);
     el.setAttribute('fill', newclr);
+    el.setAttribute('width', '24');
+    el.setAttribute('height', '24');
     });
 });
 </script>
