@@ -3,6 +3,7 @@
 @import 'variables';
 @import 'susy';
 @import url(http://fonts.googleapis.com/css?family=Raleway:400,700,800);
+@import 'foundation';
 
 $susy: (
   columns: 12,
@@ -23,14 +24,12 @@ body {
 div#view {
   @include display-flex;
   @include flex-direction(column);
-  height: 100vh;
 }
 
 div#main {
   @include flex(1);
   @include justify-content(flex-start);
   width: span(12);
-  overflow: hidden;
   @include display-flex;
 }
 
@@ -43,7 +42,7 @@ div.container {
 }
 
 div#lblocks {
-  @include flex(2 0 0);
+  @include flex(2 1 0);
   @include display-flex;
 }
 
@@ -57,7 +56,7 @@ div#personal {
   padding: 1em;
 }
 div#rblocks {
-  @include flex(1 0 0);
+  @include flex(1 1 0);
   @include display-flex;
 }
 
