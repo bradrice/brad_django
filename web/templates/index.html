@@ -1,7 +1,6 @@
 {% extends "base.html" %}
 
 {% block title %}{{ title }}{% endblock %}
-
 {% block content %}
 {%  load staticfiles %}
     <div id="lblocks">
@@ -14,8 +13,8 @@
     <filter id="blurFilter4" x="-5" y="-5" width="20" height="20">
         <feGaussianBlur in="SourceGraphic" stdDeviation="10" />
     </filter>
-</defs>
-	<rect fill="{{ obj.color }}" width="20" height="20" id="lr{{ obj.item }}" url(#blurFilter4); />
+    </defs>
+	<rect fill="{{ obj.color }}" width="100" height="100" id="lr{{ obj.item }}" style="filter: url(#blurFilter4);">
 	</svg>
     {% endfor %}
 {% endblock %}
