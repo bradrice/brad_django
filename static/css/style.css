@@ -166,7 +166,7 @@ header {
   background-color: #E8DFEF;
   -webkit-align-content: center;
   align-content: center;
-  border-bottom: 10px dotted #C7B3D6;
+  border-bottom: 16px dotted #C7B3D6;
 }
 /* line 79, ../scss/style.scss */
 header .site_head {
