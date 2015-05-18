@@ -44,6 +44,7 @@ INSTALLED_APPS = (
     'ckeditor',
     'mptt',
     'tagging',
+    'zinnia_foundation',
     'zinnia',
     'zinnia_ckeditor',
     'web',
@@ -123,3 +124,9 @@ STATIC_URL = '/static/'
 CKEDITOR_UPLOAD_PATH = "uploads/"
 
 CKEDITOR_JQUERY_URL = '//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js'
+
+TEMPLATE_LOADERS = (
+    'django.template.loaders.filesystem.Loader',
+    'django.template.loaders.app_directories.Loader',
+    'django.template.loaders.eggs.Loader',
+)
