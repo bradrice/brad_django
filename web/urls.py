@@ -11,4 +11,6 @@ urlpatterns = [
     url(r'^blog/', include('zinnia.urls', namespace='zinnia')),
     url(r'^comments/', include('django_comments.urls')),
     url(r'^ckeditor/', include('ckeditor.urls')),
+    url(r'^resume', TemplateView.as_view(template_name='resume.html')),
+    url(r'^portfolio', TemplateView.as_view(template_name='portfolio.html')),
 ]

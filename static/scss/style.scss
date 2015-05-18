@@ -30,7 +30,10 @@ div#main {
   @include flex(1);
   @include justify-content(flex-start);
   width: span(12);
-  @include display-flex;
+}
+
+div#body {
+  width: span(12);
 }
 
 div.container {
@@ -72,11 +75,15 @@ header {
   @include flex-direction(row);
   @include justify-content(center);
   @include align-items(center);
-  background-color: $color-primary-1;
   @include align-content(center);
+  background-color: $color-primary-1;
   border-bottom: 16px dotted $color-primary-2;
   .site_head {
     margin: 1em;
+  }
+  &:hover {
+    background-color: $color-primary-3;
+    border-bottom: 16px dotted $color-primary-4;
   }
 }
 
@@ -92,6 +99,55 @@ svg.box {
   }
 }
 
+.slick-prev:before, .slick-next:before {
+    color:#7e5999 !important;
+}
 
+div.polaroid {
+  border: 2px solid #aaaaaa;
+}
 
+.lightened {
+  background-color: $color-primary-1;
+  border-bottom: 16px dotted $color-primary-2;
+}
+
+.darkened {
+  background-color: $color-primary-3;
+  border-bottom: 16px dotted $color-primary-4;
+}
+
+.filtered {
+    @include filter(brightness(1) saturate(1.5));
+}
+
+#personal_logo{
+  &:hover{
+    @include filter(blur(1px) brightness(1.3) saturate(1.5));
+  }
+}
+
+a {
+  color: $link-color;
+  text-decoration: underline;
+  &:hover {
+   color: darken($link-color, 20%);
+  }
+}
+
+li {
+  background: url('../images/list_block.png') no-repeat 8px 8px transparent;
+  list-style-type: none;
+  margin: 0;
+  padding: 0px 0px 1px 28px;
+}
+
+p.intro {
+  font-size: 1.2em;
+  margin: 2em;
+}
+
+div.intro_panel {
+  margin-top: 1em;
+}
 

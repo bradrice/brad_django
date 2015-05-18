@@ -1,6 +1,7 @@
 {
-    "name": "bradweb",
-    "dependencies": {
-       "foundation": "~5.4.7"
-    }
+  "name": "bradweb",
+  "dependencies": {
+    "foundation": "~5.4.7",
+    "slick.js": "~1.5.5"
+  }
 }

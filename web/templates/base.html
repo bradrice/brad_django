@@ -7,10 +7,9 @@
     <title>{% block title %}{% endblock %}</title>
     <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
     <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-{#    <link rel="stylesheet" type="text/css" href="{% static 'bootstrap/css/bootstrap.min.css' %}" />#}
-{#    <link href='http://fonts.googleapis.com/css?family=Puritan:400,700,400italic,700italic|Sorts+Mill+Goudy:400,400italic' rel='stylesheet' type='text/css'>#}
+    <link rel="stylesheet" href="{% static "css/style.css" %}" />
+
     {%  block addedcss %}
-        <link rel="stylesheet" href="{% static "css/style.css" %}" />
     {% endblock %}
 
 </head>
@@ -18,7 +17,7 @@
 <div id="view">
     <header class="navbar navbar-head">
     <div class="site_head">
-        <img src="{% static 'images/BR_only_p.png' %}"/>
+        <img src="{% static 'images/BR_p.svg' %}" id="personal_logo"/>
      </div>
      <p>bradrice.com</p>
 </header>
@@ -29,13 +28,49 @@
 
 </div>
 <footer>
-    <div class="footer">
-        <div class="container">
-            <h3>Brad Rice</h3>
-             <p>Footer Stuff</p>
-        </div>
-    </div>
-</footer>
+		<div class="footer">
+			<div class="row">
+			<div class="large-4 large-offset-1 columns">
+				<h5>Brad Rice</h5>
+				<p>105 Evergreen Dr., Lodi, Ohio, 44254<br />
+				330-948-2090</p>
+
+				<ul>
+				<li><a href="/resume">My resumé</a></li>
+				<li><a href="/portfolio">A portfolio of my web work</a></li>
+			</ul>
+			</div>
+			<div class="large-4 large-offset-1 columns">
+
+				<div class="icns">
+					<h5>Connect</h5>
+					<a href="http://www.bradrice.com/blog" target="_blank"><img src="{% static 'images/icons/BR_32.png' %}"></a>
+					<a href="mailto:brad@bradrice.com"><img src="{% static 'images/icons/email_001.png' %}" alt="email"/></a>
+					<a href="https://www.facebook.com/brad.c.rice" target="_blank"><img src="{% static 'images/icons/facebook_001.png' %}" alt="facebook"/></a>
+					<a href="https://plus.google.com/u/0/110400900554477791544/posts" target="_blank"><img src="{% static 'images/icons/Google_Plus_001.png' %}" alt="google+"/></a>
+					<a href="http://www.linkedin.com/in/bradbucks/" target="_blank"><img src="{% static 'images/icons/Linkedin_001.png' %}" alt="LinkedIn"/></a>
+					<a href="http://twitter.com/brad_rice" target="_blank"><img src="{% static 'images/icons/Twitter_001.png' %}" alt="twitter"/></a>
+					<a href="http://bradrice.com/blog/rss.xml"><img src="{% static 'images/icons/RSS_001.png' %}" alt="rss"/></a>
+				</div>
+			</div><!-- end column -->
+			</div><!--end row -->
+		</div><!--end footer div -->
+	</footer>
+</div><!-- end container -->
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-1815807-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
 </div>
 
 {%  block scripts %}{%  endblock %}

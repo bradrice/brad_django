@@ -18,7 +18,7 @@ class HomeView(TemplateView):
         context = super(HomeView, self).get_context_data(**kwargs)
         context['title'] = "Brad Rice home"
         color_list =  ["#A183B6", "#E8DFEF", "#C7B3D6", "#7E5999", "#5D337B", "#DDF2AA", "#F7FCEB", "#ECF8CD", "#BBD776", "#8DAD41", "#FFF0B3", "#FFFCED", "#FFF7D3", "#E4D07E", "#B7A145"]
-        context['p_list'] = self.build_dict(purple_list, 800)
+        context['p_list'] = self.build_dict(purple_list, 1200)
         context['c_list'] = self.build_dict(color_list, 600)
         return context
 

@@ -1,8 +1,11 @@
 {% extends "base.html" %}
-
+{% load staticfiles %}
 {% block title %}{{ title }}{% endblock %}
+{% block addedcss %}
+<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.5.0/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="{% static 'lib/slick.js/slick/slick-theme.css' %}"/>
+{% endblock %}
 {% block content %}
-{%  load staticfiles %}
     <div id="lblocks">
     <div class="wrap">
          {% block svg_blocks %}
@@ -32,36 +35,28 @@
 					<p>I live in Lodi, Ohio, where I also serve on Village Council. I am a trustee for the <a href="http://mcdl.info">Medina County District Library</a>. I love to read. I am active in my church and continue to draw and paint as an artist.</p>
 					<h3>The details</h3>
 					<ul>
-						<li><a href="/ci/index.php/portfolio/resume">My resumé</a></li>
-						<li><a href="/ci/index.php/portfolio">A portfolio of my web work</a></li>
+						<li><a href="/resume">My resumé</a></li>
+						<li><a href="/portfolio">A portfolio of my web work</a></li>
 					</ul>
 				</div>
-				<div class="large-12 columns">
-					<h3>Sketches</h3>
+            </div>
+            <div class="row">
+                <div class="large-7 large-offset-2 columns">
+					<h3>Pencil Sketches</h3>
 					<div class="polaroid" id="slides">
-					<img src="/static/images/water_dragon.jpg" alt="Water Dragon" />
-					<img src="/static/images/nutmeg_moon.jpg" alt="Nutmeg Moon" />
-					<img src="/static/images/oak_leaf.jpg" alt="Oak leaf" />
-					<img src="/static/images/starbucks.jpg" alt="Starbucks" />
-					<img src="/static/images/waterfall.jpg" alt="Waterfall" />
-					<img src="/static/images/acoustic_dead.jpg" alt="Accoustic Dead" />
-					<img src="/static/images/pandora.jpg" alt="pandora" />
-					<img src="/static/images/iPod.jpg" alt="iPod" />
-				</div>
+					<img src="{% static  'images/sketches/water_dragon.jpg' %}" alt="Water Dragon" />
+					<img src="{% static  'images/sketches/nutmeg_moon.jpg' %}" alt="Nutmeg Moon" />
+					<img src="{% static  'images/sketches/oak_leaf.jpg' %}" alt="Oak leaf" />
+					<img src="{% static  'images/sketches/starbucks.jpg' %}" alt="Starbucks" />
+					<img src="{% static  'images/sketches/waterfall.jpg' %}" alt="Waterfall" />
+					<img src="{% static  'images/sketches/acoustic_dead.jpg' %}" alt="Accoustic Dead" />
+					<img src="{% static  'images/sketches/pandora.jpg' %}" alt="pandora" />
+					<img src="{% static  'images/sketches/iPod.jpg' %}" alt="iPod" />
+				    </div>
+			    </div>
+            </div>
 
-
-			</div>
 		</div>
-
-		<script>
-    $(function(){
-      $("#slides").slidesjs({
-        width: 500,
-        height: 624
-      });
-    });
-  </script>
-    </div>
     <div id="rblocks">
     <div class="wrap">
         {% include '_rsvg_blocks.html' %}
@@ -69,20 +64,14 @@
     </div>
 {% endblock %}
 {% block scripts %}
-<script type="text/javascript" src="{% static "js/site.js" %}"></script>
-    <script type="text/javascript">
-$(document).ready(function(){
-$(".box").on('mouseover', function(){
-    var parentel = $(this);
-    var els = $(this.getElementsByTagName('rect'));
-    var el = els.get(0);
-{#    console.log(el);#}
-    var thisclr = el.getAttribute('fill');
-    var newclr = shadeColor1(thisclr, 10);
-    el.setAttribute('fill', newclr);
-    el.setAttribute('width', '24');
-    el.setAttribute('height', '24');
+    <script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.5.0/slick.min.js"></script>
+    <script type="text/javascript" src="{% static "js/site.js" %}"></script>
+    <script>
+    $(document).ready(function(){
+    $("#slides").slick({
+        arrows: true
     });
-});
-</script>
+    });
+    </script>
+
 {% endblock %}

@@ -3,3 +3,17 @@ function shadeColor1(color, percent) {
     return "#" + (0x1000000 + (R<255?R<1?0:R:255)*0x10000 + (G<255?G<1?0:G:255)*0x100 + (B<255?B<1?0:B:255)).toString(16).slice(1);
 }
 
+$(document).ready(function(){
+
+$(".box").on('mouseover', function(){
+    var parentel = $(this);
+    var els = $(this.getElementsByTagName('rect'));
+    var el = els.get(0);
+    var thisclr = el.getAttribute('fill');
+    var newclr = shadeColor1(thisclr, 10);
+    el.setAttribute('fill', newclr);
+    el.setAttribute('width', '24');
+    el.setAttribute('height', '24');
+    });
+
+});
