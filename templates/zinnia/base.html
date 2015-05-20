@@ -1,6 +1,6 @@
 {% extends "zinnia/skeleton.html" %}
 {% load zinnia i18n %}
-
+{% load staticfiles %}
 {% block meta-keywords %}{% get_tags as entry_tags %}{{ entry_tags|join:", "}}{% endblock meta-keywords %}
 
 {% block meta %}
@@ -8,6 +8,7 @@
 {% endblock meta %}
 
 {% block link %}
+    <link rel="shortcut icon" type="image/png" href="{% static 'favicon.ico' %}"/>
     <link rel="index" href="{% url 'zinnia:entry_archive_index' %}" />
     <link rel="author" type="text/plain" href="{% url 'zinnia:humans' %}" />
     <link rel="EditURI" type="application/rsd+xml" href="{% url 'zinnia:rsd' %}" />
@@ -26,14 +27,9 @@
 <div id="widget-welcome" class="widget">
   <h4>{% trans "Welcome!" %}</h4>
   <p>
-    {% trans "This simple theme is the Zurb Foundation theme for Zinnia." %}
+    {% trans "Brad's blog." %}
   </p>
-  <p>
-    Brad
-  </p>
-  <p>
-    You can also change the design with Sass. Learn more in the <a href="https://github.com/gustavi/zinnia-theme-foundation">Zinnia Foundation repo</a>.
-  </p>
+
 </div>
 <hr>
 <div id="widget-categories" class="widget">
@@ -41,10 +37,10 @@
   {% get_categories %}
 </div>
 <hr>
-<div id="widget-authors" class="widget">
-  <h4>{% trans "Authors" %}</h4>
-  {% get_authors %}
-</div>
+{#<div id="widget-authors" class="widget">#}
+{#  <h4>{% trans "Authors" %}</h4>#}
+{#  {% get_authors %}#}
+{#</div>#}
 <hr>
 <div id="widget-calendar" class="widget">
   <h4>{% trans "Calendar" %}</h4>
@@ -56,31 +52,31 @@
   {% get_tag_cloud %}
 </div>
 <hr>
-<div id="widget-recents" class="widget">
-  <h4>{% trans "Recent entries" %}</h4>
-  {% get_recent_entries %}
-</div>
-<hr>
-<div id="widget-comments" class="widget">
-  <h4>{% trans "Recent comments" %}</h4>
-  {% get_recent_comments %}
-</div>
-<hr>
-<div id="widget-linkbacks" class="widget">
-  <h4>{% trans "Recent linkbacks" %}</h4>
-  {% get_recent_linkbacks %}
-</div>
-<hr>
-<div id="widget-randoms" class="widget">
-  <h4>{% trans "Random entries" %}</h4>
-  {% get_random_entries %}
-</div>
-<hr>
-<div id="widget-populars" class="widget">
-  <h4>{% trans "Popular entries" %}</h4>
-  {% get_popular_entries %}
-</div>
-<hr>
+{#<div id="widget-recents" class="widget">#}
+{#  <h4>{% trans "Recent entries" %}</h4>#}
+{#  {% get_recent_entries %}#}
+{#</div>#}
+{#<hr>#}
+{#<div id="widget-comments" class="widget">#}
+{#  <h4>{% trans "Recent comments" %}</h4>#}
+{#  {% get_recent_comments %}#}
+{#</div>#}
+{#<hr>#}
+{#<div id="widget-linkbacks" class="widget">#}
+{#  <h4>{% trans "Recent linkbacks" %}</h4>#}
+{#  {% get_recent_linkbacks %}#}
+{#</div>#}
+{#<hr>#}
+{#<div id="widget-randoms" class="widget">#}
+{#  <h4>{% trans "Random entries" %}</h4>#}
+{#  {% get_random_entries %}#}
+{#</div>#}
+{#<hr>#}
+{#<div id="widget-populars" class="widget">#}
+{#  <h4>{% trans "Popular entries" %}</h4>#}
+{#  {% get_popular_entries %}#}
+{#</div>#}
+{#<hr>#}
 <div id="widget-archives" class="widget">
   <h4>{% trans "Archives" %}</h4>
   {% get_archives_entries_tree %}

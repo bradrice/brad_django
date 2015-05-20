@@ -28,6 +28,7 @@ div#view {
 
 div#main {
   @include flex(1);
+  @include flex-grow(1);
   @include justify-content(flex-start);
   width: span(12);
 }
@@ -46,12 +47,12 @@ div.container {
 
 div#lblocks {
   @include flex(2 1 0);
-  @include display-flex;
+  //@include display-flex;
 }
 
 div.wrap {
   @include flex-wrap(wrap);
-  @include display-flex;
+  //@include display-flex;
 }
 
 div#personal {
@@ -60,7 +61,7 @@ div#personal {
 }
 div#rblocks {
   @include flex(1 1 0);
-  @include display-flex;
+  //@include display-flex;
 }
 
 
@@ -81,9 +82,8 @@ header {
   .site_head {
     margin: 1em;
   }
-  &:hover {
-    background-color: $color-primary-3;
-    border-bottom: 16px dotted $color-primary-4;
+  &.navbar {
+    margin-bottom: 1em;
   }
 }
 
@@ -135,7 +135,7 @@ a {
   }
 }
 
-li {
+ul.pbox li {
   background: url('../images/list_block.png') no-repeat 8px 8px transparent;
   list-style-type: none;
   margin: 0;
@@ -151,3 +151,25 @@ div.intro_panel {
   margin-top: 1em;
 }
 
+nav.top-bar {
+  margin-bottom: 0px;
+  background-color: $color-primary-4;
+}
+
+.top-bar-section .has-form, .top-bar-section li:not(.has-form) a:not(.button) {
+  background-color: $color-primary-4;
+}
+
+button.alert, .button.alert {
+  background-color: $color-secondary-2-1;
+  color: #1a1a1a;
+}
+
+button.alert:hover, button.alert:focus, .button.alert:hover, .button.alert:focus {
+  background-color: $color-secondary-2-4;
+  color: #1a1a1a;
+}
+
+div#blog-sidebar {
+  background-color: $color-secondary-2-2;
+}

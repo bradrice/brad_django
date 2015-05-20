@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="shortcut icon" type="image/png" href="{% static 'favicon.ico' %}"/>
     <title>{% block title %}{% endblock %}</title>
     <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
     <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
@@ -15,11 +16,40 @@
 </head>
 <body>
 <div id="view">
-    <header class="navbar navbar-head">
+    <nav class="top-bar" data-topbar role="navigation">
+  <ul class="title-area">
+    <li class="name">
+      <h1><a href="/">Home</a></h1>
+    </li>
+     <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
+    <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+  </ul>
+
+  <section class="top-bar-section">
+    <!-- Right Nav Section -->
+    <ul class="right">
+      <li class="has-dropdown">
+        <a href="#">Code fragments</a>
+        <ul class="dropdown">
+          <li><a href="/sass-resources">SASS resources</a></li>
+          <li><a href="/less-resources">Less resources</a></li>
+        </ul>
+      </li>
+    </ul>
+
+    <!-- Left Nav Section -->
+    <ul class="left">
+      <li><a href="/resume">Resumé</a></li>
+        <li><a href="/portfolio">Portfolio</a></li>
+         <li><a href="/blog">Brad's Weblog</a></li>
+    </ul>
+  </section>
+</nav>
+          <header class="navbar navbar-head">
     <div class="site_head">
-        <img src="{% static 'images/BR_p.svg' %}" id="personal_logo"/>
+        <a href="/"><img src="{% static 'images/BR_p.svg' %}" id="personal_logo"/></a>
      </div>
-     <p>bradrice.com</p>
+     <p><a href="/">bradrice.com</a></p>
 </header>
  <div id="main">
     <div class="container">
@@ -35,7 +65,7 @@
 				<p>105 Evergreen Dr., Lodi, Ohio, 44254<br />
 				330-948-2090</p>
 
-				<ul>
+				<ul class="pbox">
 				<li><a href="/resume">My resumé</a></li>
 				<li><a href="/portfolio">A portfolio of my web work</a></li>
 			</ul>

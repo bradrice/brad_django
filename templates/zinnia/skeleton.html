@@ -1,0 +1,168 @@
+{% load i18n staticfiles %}
+<!doctype html>
+<html class="no-js" lang="{{ LANGUAGE_CODE }}">
+  <head>
+    <title>Zinnia's Weblog - {% block title %}{% endblock title %}{% block title-page %}{% endblock title-page %}</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="cache-control" content="public" />
+    <meta name="robots" content="follow, all" />
+    <meta name="language" content="{{ LANGUAGE_CODE }}" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="{% block meta-description %}{% trans "Brad's Weblog" %}{% endblock meta-description %}{% block meta-description-page %}{% endblock meta-description-page %}" />
+    <meta name="keywords" content="{% block meta-keywords %}django, blog, weblog, zinnia, code, python, css, html, design{% endblock meta-keywords %}" />
+    <meta name="author" content="bradrice" />
+    {% block meta %}{% endblock meta %}
+    <link rel="pingback" href="/xmlrpc/" />
+    <link rel="shortcut icon" href="{% static "zinnia/img/favicon.ico" %}" />
+    <link rel="home" href="{% url 'zinnia:entry_archive_index' %}" />
+    <link rel="stylesheet" href="{% static "zinnia/css/foundation.css" %}" />
+    <link rel="stylesheet" href="{% static "zinnia/icons/foundation-icons.css" %}" />
+    <link rel="stylesheet" href="{% static "css/style.css" %}" />
+    <script src="{% static "zinnia/js/vendor/modernizr.js" %}"></script>
+    <style>
+      /* Foundation fixs for Zinnia blog */
+      .entries-calendar td, .no-entries-calendar td { background: #fff; text-align: center; }
+      .entries-calendar th, .no-entries-calendar th { text-align: center; padding: 0px; }
+      .entries-calendar, .no-entries-calendar { table-layout: fixed; width: 100%; }
+      td.entry { background: #f5f5f5 }
+      .top-bar { margin-bottom: 0px }
+      .tag-2 { font-size: 1.4em }
+      .tag-3 { font-size: 1.8em }
+      .tag-4 { font-size: 2.2em }
+      .tag-5 { font-size: 2.6em }
+      .tag-6 { font-size: 3em }
+      #input-search-top { height: 1.8rem }
+      #zinnia-slogan { display: block; margin-top: 10px; }
+      .entry-image img { margin: 0px 1em 1em 0px; }
+    </style>
+    {% block link %}{% endblock link %}
+    {% block script %}{% endblock script %}
+  </head>
+
+  <body class="zinnia {% block theme-class %}default{% endblock theme-class %} {% block color-class %}blue{% endblock color-class %} {% block sidebar-class %}right-sidebar{% endblock sidebar-class %} {% block body-class %}{% endblock body-class %}">
+    <nav class="top-bar" data-topbar>
+      <ul class="title-area">
+        <li class="name">
+          <h1>
+            <a href="{% url 'zinnia:entry_archive_index' %}" title="Zinnia's Weblog" rel="home">
+              Brad's Weblog
+            </a>
+          </h1>
+        </li>
+        <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
+        <li class="toggle-topbar menu-icon">
+          <a href="#">
+            <span>Menu</span>
+          </a>
+        </li>
+      </ul>
+      <section class="top-bar-section">
+        <!-- Right Nav Section -->
+        <ul class="right">
+          <li class="has-form">
+            <form method="get" action="{% url 'zinnia:entry_search' %}">
+              <div class="row collapse">
+                <div class="large-8 small-9 columns">
+                  <input id="input-search-top" type="text" name="pattern" placeholder="{% trans "Keywords..." %}" {% if pattern %}value="{{ pattern }}"{% endif %} />
+                </div>
+                <div class="large-4 small-3 columns">
+                  <input type="submit" class="alert button expand" value="OK" />
+                </div>
+              </div>
+            </form>
+          </li>
+          <li class="divider"></li>
+          <li>
+            <a href="{% url 'zinnia:sitemap' %}" title="{% trans "Sitemap" %}" class="sitemap">
+              <i class="fi-map"></i>
+              {% trans "Sitemap" %}
+            </a>
+          </li>
+          <li class="divider"></li>
+          <li>
+            <a href="{% url 'zinnia:entry_latest_feed' %}" title="{% trans "RSS Feed of latest entries" %}" class="feeds">
+            <i class="fi-rss"></i>
+            {% trans "RSS Feed" %}
+            </a>
+          </li>
+        </ul>
+      </section>
+    </nav>
+    <div id="view">
+    <header class="navbar navbar-head">
+    <div class="site_head">
+        <a href="/"><img src="{% static 'images/BR_p.svg' %}" id="personal_logo"/></a>
+     </div>
+     <p><a href="/">bradrice.com</a></p>
+</header>
+ <div id="main">
+    <div class="container">
+    {% block slider %}{% endblock slider %} <!-- TODO -->
+    <div class="row">
+      <div class="large-8 small-12 columns" id="content">
+        {% block content %}
+          <div class="links">
+            <h3>{% trans "Useful links" %}</h3>
+            <ul>
+              <li>
+                <a href="{% url 'zinnia:entry_archive_index' %}" title="{% trans "Weblog index" %}">
+                  {% trans "Weblog index" %}
+                </a>
+              </li>
+              <li>
+                <a href="{% url 'zinnia:sitemap' %}" title="{% trans "Sitemap" %}">
+                  {% trans "Sitemap" %}
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="search">
+            <h3>{% trans "Search" %}</h3>
+            {% include "zinnia/tags/search_form.html" %}
+          </div>
+        {% endblock content %}
+      </div>
+      <div class="large-4 small-12 columns panel" id="blog-sidebar">
+        {% block sidebar %}
+        {% endblock sidebar %}
+      </div>
+    </div>
+    </div>
+<footer>
+		<div class="footer">
+			<div class="row">
+			<div class="large-4 large-offset-1 columns">
+				<h5>Brad Rice</h5>
+				<p>105 Evergreen Dr., Lodi, Ohio, 44254<br />
+				330-948-2090</p>
+
+				<ul class="pbox">
+				<li><a href="/resume">My resumé</a></li>
+				<li><a href="/portfolio">A portfolio of my web work</a></li>
+			</ul>
+			</div>
+			<div class="large-4 large-offset-1 columns">
+
+				<div class="icns">
+					<h5>Connect</h5>
+					<a href="http://www.bradrice.com/blog" target="_blank"><img src="{% static 'images/icons/BR_32.png' %}"></a>
+					<a href="mailto:brad@bradrice.com"><img src="{% static 'images/icons/email_001.png' %}" alt="email"/></a>
+					<a href="https://www.facebook.com/brad.c.rice" target="_blank"><img src="{% static 'images/icons/facebook_001.png' %}" alt="facebook"/></a>
+					<a href="https://plus.google.com/u/0/110400900554477791544/posts" target="_blank"><img src="{% static 'images/icons/Google_Plus_001.png' %}" alt="google+"/></a>
+					<a href="http://www.linkedin.com/in/bradbucks/" target="_blank"><img src="{% static 'images/icons/Linkedin_001.png' %}" alt="LinkedIn"/></a>
+					<a href="http://twitter.com/brad_rice" target="_blank"><img src="{% static 'images/icons/Twitter_001.png' %}" alt="twitter"/></a>
+					<a href="http://bradrice.com/blog/rss.xml"><img src="{% static 'images/icons/RSS_001.png' %}" alt="rss"/></a>
+				</div>
+			</div><!-- end column -->
+			</div><!--end row -->
+		</div><!--end footer div -->
+	</footer>
+    <script src="{% static "zinnia/js/vendor/jquery.js" %}"></script>
+    <script src="{% static "zinnia/js/foundation.min.js" %}"></script>
+    <script>
+      $(document).foundation();
+      var doc = document.documentElement;
+      doc.setAttribute('data-useragent', navigator.userAgent);
+    </script>
+  </body>
+</html>

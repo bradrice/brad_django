@@ -9140,17 +9140,19 @@ div#view {
 div#main {
   -webkit-flex: 1;
   flex: 1;
+  -webkit-flex-grow: 1;
+  flex-grow: 1;
   -webkit-justify-content: flex-start;
   justify-content: flex-start;
   width: 100%;
 }
 
-/* line 35, ../scss/style.scss */
+/* line 36, ../scss/style.scss */
 div#body {
   width: 100%;
 }
 
-/* line 39, ../scss/style.scss */
+/* line 40, ../scss/style.scss */
 div.container {
   display: -webkit-flex;
   display: flex;
@@ -9163,45 +9165,39 @@ div.container {
   width: 100%;
 }
 
-/* line 47, ../scss/style.scss */
+/* line 48, ../scss/style.scss */
 div#lblocks {
   -webkit-flex: 2 1 0;
   flex: 2 1 0;
-  display: -webkit-flex;
-  display: flex;
 }
 
-/* line 52, ../scss/style.scss */
+/* line 53, ../scss/style.scss */
 div.wrap {
   -webkit-flex-wrap: wrap;
   flex-wrap: wrap;
-  display: -webkit-flex;
-  display: flex;
 }
 
-/* line 57, ../scss/style.scss */
+/* line 58, ../scss/style.scss */
 div#personal {
   -webkit-flex: 6 0 0;
   flex: 6 0 0;
   padding: 1em;
 }
 
-/* line 61, ../scss/style.scss */
+/* line 62, ../scss/style.scss */
 div#rblocks {
   -webkit-flex: 1 1 0;
   flex: 1 1 0;
-  display: -webkit-flex;
-  display: flex;
 }
 
-/* line 67, ../scss/style.scss */
+/* line 68, ../scss/style.scss */
 footer {
   min-height: 100px;
   background-color: #DDF2AA;
   padding: 1em;
 }
 
-/* line 73, ../scss/style.scss */
+/* line 74, ../scss/style.scss */
 header {
   display: -webkit-flex;
   display: flex;
@@ -9216,14 +9212,13 @@ header {
   background-color: #E8DFEF;
   border-bottom: 16px dotted #C7B3D6;
 }
-/* line 81, ../scss/style.scss */
+/* line 82, ../scss/style.scss */
 header .site_head {
   margin: 1em;
 }
-/* line 84, ../scss/style.scss */
-header:hover {
-  background-color: #7E5999;
-  border-bottom: 16px dotted #5D337B;
+/* line 85, ../scss/style.scss */
+header.navbar {
+  margin-bottom: 1em;
 }
 
 /* line 90, ../scss/style.scss */
@@ -9291,7 +9286,7 @@ a:hover {
 }
 
 /* line 138, ../scss/style.scss */
-li {
+ul.pbox li {
   background: url("../images/list_block.png") no-repeat 8px 8px transparent;
   list-style-type: none;
   margin: 0;
@@ -9307,4 +9302,32 @@ p.intro {
 /* line 150, ../scss/style.scss */
 div.intro_panel {
   margin-top: 1em;
+}
+
+/* line 154, ../scss/style.scss */
+nav.top-bar {
+  margin-bottom: 0px;
+  background-color: #5D337B;
+}
+
+/* line 159, ../scss/style.scss */
+.top-bar-section .has-form, .top-bar-section li:not(.has-form) a:not(.button) {
+  background-color: #5D337B;
+}
+
+/* line 163, ../scss/style.scss */
+button.alert, .button.alert {
+  background-color: #FFFCED;
+  color: #1a1a1a;
+}
+
+/* line 168, ../scss/style.scss */
+button.alert:hover, button.alert:focus, .button.alert:hover, .button.alert:focus {
+  background-color: #B7A145;
+  color: #1a1a1a;
+}
+
+/* line 173, ../scss/style.scss */
+div#blog-sidebar {
+  background-color: #FFF7D3;
 }
