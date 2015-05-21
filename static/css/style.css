@@ -9331,3 +9331,8 @@ button.alert:hover, button.alert:focus, .button.alert:hover, .button.alert:focus
 div#blog-sidebar {
   background-color: #FFF7D3;
 }
+
+/* line 177, ../scss/style.scss */
+.entries-calendar td.entry {
+  background-color: #ECF8CD;
+}

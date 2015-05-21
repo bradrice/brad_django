@@ -121,6 +121,10 @@ STATIC_ROOT = '/home/bradrice/webapps/static_media'
 
 STATIC_URL = '/static/'
 
+STATICFILES_DIRS = (
+'/home/bradrice/lib/python3.4/zinnia_foundation/static',
+)
+
 CKEDITOR_UPLOAD_PATH = "uploads/"
 
 CKEDITOR_JQUERY_URL = '//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js'
