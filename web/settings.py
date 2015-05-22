@@ -41,6 +41,7 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'django_comments',
     'django.contrib.sites',
+    'ckeditor',
     'mptt',
     'tagging',
     'zinnia_foundation',
@@ -128,3 +129,5 @@ TEMPLATE_LOADERS = (
     'django.template.loaders.app_directories.Loader',
     'django.template.loaders.eggs.Loader',
 )
+
+
