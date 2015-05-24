@@ -15,3 +15,6 @@ Thumbs.db
 db.sqlite3
 /static/.sass-cache/*
 /static/.sass-cache
+__pycache__/*
+*/__pycache__/*
+*.pyc
