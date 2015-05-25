@@ -1,6 +1,7 @@
 require 'compass/import-once/activate'
 # Require any additional compass plugins here.
 add_import_path "lib/foundation/scss"
+add_import_path "lib/foundation/scss/foundation"
 require "susy"
 
 # Set this to the root of your project when deployed:

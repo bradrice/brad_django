@@ -3,6 +3,7 @@
 @import 'variables';
 @import 'susy';
 @import url(http://fonts.googleapis.com/css?family=Raleway:400,700,800);
+@import "settings";
 @import 'foundation';
 
 $susy: (
@@ -149,15 +150,6 @@ p.intro {
 
 div.intro_panel {
   margin-top: 1em;
-}
-
-nav.top-bar {
-  margin-bottom: 0px;
-  background-color: $color-primary-4;
-}
-
-.top-bar-section .has-form, .top-bar-section li:not(.has-form) a:not(.button) {
-  background-color: $color-primary-4;
 }
 
 button.alert, .button.alert {
