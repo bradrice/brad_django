@@ -18,4 +18,5 @@ urlpatterns = [
     url(r'^less-resources', TemplateView.as_view(template_name='less-resources.html')),
     url(r'^color-resources', TemplateView.as_view(template_name='color-resources.html')),
     url(r'^flex-resources', TemplateView.as_view(template_name='flex-resources.html')),
+    url(r'^demo/stickydemo', TemplateView.as_view(template_name='demos/sticky.html')),
 ]

@@ -27,7 +27,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
-SITE_ID = 1
+SITE_ID = 2
 
 
 # Application definition
@@ -118,6 +118,8 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.8/howto/static-files/
 
 STATIC_ROOT = '/home/bradrice/webapps/static_media'
+
+MEDIA_ROOT = 'home/bradrice/webapps/bradweb/web/media/'
 
 STATIC_URL = '/static/'
 

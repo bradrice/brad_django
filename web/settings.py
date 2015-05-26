@@ -42,12 +42,11 @@ INSTALLED_APPS = (
     'django_comments',
     'django.contrib.sites',
     'ckeditor',
-    # 'django_pygments',
     'mptt',
     'tagging',
     'zinnia_foundation',
     'zinnia',
-    # 'zinnia_ckeditor',
+    'zinnia_ckeditor',
     'web',
 )
 
@@ -130,5 +129,32 @@ TEMPLATE_LOADERS = (
     'django.template.loaders.app_directories.Loader',
     'django.template.loaders.eggs.Loader',
 )
+
+CKEDITOR_CONFIGS = {
+    'default': {
+        'toolbar': 'Zinnia',
+        'extraPlugins': 'codesnippet',
+        "codeSnippet_theme": "monokai_sublime",
+            'skin': 'moono-dark',
+    },
+    'zinnia-content': {
+        'toolbar_Zinnia': [
+            ['Cut', 'Copy', 'Paste', 'PasteText', 'PasteFromWord'],
+            ['Undo', 'Redo'],
+            ['Scayt'],
+            ['Link', 'Unlink', 'Anchor'],
+            ['Image', 'Table', 'HorizontalRule', 'SpecialChar'],
+            ['Source'],
+            ['Maximize'],
+            '/',
+            ['Bold', 'Italic', 'Underline', 'Strike',
+             'Subscript', 'Superscript', '-', 'RemoveFormat'],
+            ['NumberedList', 'BulletedList', '-',
+             'Outdent', 'Indent', '-', 'Blockquote'],
+            ['Styles', 'Format'],
+        ],
+        'toolbar': 'Zinnia',
+    },
+}
 
 
