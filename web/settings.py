@@ -42,11 +42,12 @@ INSTALLED_APPS = (
     'django_comments',
     'django.contrib.sites',
     'ckeditor',
+    # 'django_pygments',
     'mptt',
     'tagging',
     'zinnia_foundation',
     'zinnia',
-    'zinnia_ckeditor',
+    # 'zinnia_ckeditor',
     'web',
 )
 

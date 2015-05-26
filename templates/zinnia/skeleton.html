@@ -19,6 +19,8 @@
     <link rel="stylesheet" href="{% static "zinnia/icons/foundation-icons.css" %}" />
     <link rel="stylesheet" href="{% static "css/style.css" %}" />
     <script src="{% static "zinnia/js/vendor/modernizr.js" %}"></script>
+    <link rel="stylesheet" href="{% static 'lib/highlightjs/styles/github.css' %}">
+    <script src="{% static 'lib/highlightjs/highlight.pack.js' %}"></script>
     <style>
       /* Foundation fixs for Zinnia blog */
       .entries-calendar td, .no-entries-calendar td { background: #fff; text-align: center; }
@@ -141,7 +143,7 @@
 <footer>
 		<div class="footer">
 			<div class="row">
-			<div class="large-4 large-offset-1 columns">
+			<div class="large-4 columns">
 				<h5>Brad Rice</h5>
 				<p>105 Evergreen Dr., Lodi, Ohio, 44254<br />
 				330-948-2090</p>
@@ -169,6 +171,7 @@
 	</footer>
     <script src="{% static "zinnia/js/vendor/jquery.js" %}"></script>
     <script src="{% static "zinnia/js/foundation.min.js" %}"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
     <script>
       $(document).foundation();
       var doc = document.documentElement;
