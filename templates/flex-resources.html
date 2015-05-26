@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+{% block title %}{{ title }}{% endblock %}
+{% block addedcss %}
+{% endblock %}
+{% block content %}
+<div id="body">
+		<div class="row">
+			<div class="panel intro_panel">
+			<p class="intro">Flex is a css3 specification that allows for flexible page layout design in both horizontal and vertical directions.</p>
+		</div>
+		</div>
+		<div class="row">
+			<div class="large-9 columns">
+			<h2>Flex resources</h2>
+                <ul class="pbox">
+                    <li><a href="http://www.w3.org/TR/2015/WD-css-flexbox-1-20150514/">W3C working draft</a></li>
+                    <li><a href="https://scotch.io/tutorials/a-visual-guide-to-css3-flexbox-properties">A visual guide</a></li>
+                    <li><a href="http://the-echoplex.net/flexyboxes/">Flexy boxes playground</a></li>
+                    <li><a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/">CSS Tricks guide to Flexbox</a></li>
+                    <li><a href="http://davidwalsh.name/flexbox-dice">Build dice using flex</a></li>
+                    <li><a href="http://compass-style.org/reference/compass/css3/flexbox/">Compass flex helpers for Sass</a></li>
+                </ul>
+			</div>
+		</div>
+
+
+
+
+	</div><!-- end body -->
+
+{% endblock %}
+{% block scripts %}
+    <script type="text/javascript" src="{% static "js/site.js" %}"></script>
+{% endblock %}

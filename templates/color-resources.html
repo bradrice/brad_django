@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+{% block title %}{{ title }}{% endblock %}
+{% block addedcss %}
+{% endblock %}
+{% block content %}
+<div id="body">
+		<div class="row">
+			<div class="panel intro_panel">
+			<p class="intro">Resources for color design and theory.</p>
+		</div>
+		</div>
+		<div class="row">
+			<div class="large-9 columns">
+			<h2>Color resources</h2>
+                <h3>Color palettes and tools</h3>
+                <ul class="pbox">
+                    <li><a href="http://paletton.com/http://lesscss.org/">Palleton</a></li>
+                    <li><a href="https://color.adobe.com/">Adobe Kuler (now Adobe Color)</a></li>
+                    <li><a href="http://www.smashingmagazine.com/2010/02/08/color-theory-for-designer-part-3-creating-your-own-color-palettes/">Smashing Magazine - Color Theory For Designers: Creating Your Own Color Palettes</a></li>
+                    <li><a href="http://coolors.co/app">Coolors</a></li>
+                    <li><a href="http://www.materialpalette.com//">Materials Palette</a></li>
+                    <li><a href="http://www.colorschemer.com/">Color Schemer app</a></li>
+                </ul>
+                <h3>Theory</h3>
+                <ul class="pbox">
+                    <li><a href="http://www.smashingmagazine.com/2010/01/28/color-theory-for-designers-part-1-the-meaning-of-color/">The meaning of color</a></li>
+                    <li><a href="http://www.webdesign.org/blow-up-your-website-conversions-using-color.22533.html">Blow Up Your Website Conversions Using Color</a></li>
+                    <li><a href="http://www.vandelaydesign.com/ultimate-guide-color-theory-designers/">Ultimate Guide to Color Theory for Designers</a></li>
+                </ul>
+			</div>
+		</div>
+
+
+
+
+	</div><!-- end body -->
+
+{% endblock %}
+{% block scripts %}
+    <script type="text/javascript" src="{% static "js/site.js" %}"></script>
+{% endblock %}

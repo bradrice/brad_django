@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+{% block title %}{{ title }}{% endblock %}
+{% block addedcss %}
+{% endblock %}
+{% block content %}
+<div id="body">
+		<div class="row">
+			<div class="panel intro_panel">
+			<p class="intro">Sass is a css preprocessor technology originally written in Ruby.</p>
+		</div>
+		</div>
+		<div class="row">
+			<div class="large-9 columns">
+			<h2>Sass resources</h2>
+                <h3>Sass on the web</h3>
+                <ul class="pbox">
+                    <li><a href="http://sass-lang.com//">SASS website</a></li>
+                    <li><a href="http://sassmeister.com/">Sass Meister</a></li>
+                    <li><a href="http://www.sitepoint.com/sass-basics-rules-directives/">@ rule directives in Sass</a></li>
+                    <li><a href="https://www.codeschool.com/courses/assembling-sass">CodeSchool Sass course</a></li>
+                    <li><a href="http://www.sitepoint.com/managing-responsive-breakpoints-sass/">Manage breakpoints with Sass</a></li>
+                    <li><a href="http://breakpoint-sass.com/">Breakpoint</a></li>
+                    <li><a href="http://www.sitepoint.com/sass-functions-kick-start-style-sheets">Sass function tutorial</a></li>
+                    <li><a href="http://www.hongkiat.com/blog/bootstrap-and-sass/">Using Bootstrap 3 with Sass</a></li>
+                    <li><a href="http://foundation.zurb.com/docs/sass.html">Using Foundation with Sass</a></li>
+                </ul>
+                <h3>Compass</h3>
+                <ul class="pbox">
+                    <li><a href="http://compass-style.org/">Compass CSS Authoring framework</a></li>
+                    <li><a href="http://compass-style.org/reference/compass/css3/">Compass css3 helpers</a></li>
+                </ul>
+                <h3>Susy</h3>
+                <ul class="pbox">
+                    <li><a href="http://susy.oddbird.net/">Susy</a></li>
+                    <li><a href="http://susydocs.oddbird.net/en/latest/">Susy docs</a></li>
+                    <li><a href="http://susy.oddbird.net/demos/">Susy tutorials and examples</a></li>
+                </ul>
+                <h3>Books on Sass</h3>
+                <ul>
+                    <li><a href="https://pragprog.com/book/pg_sass/pragmatic-guide-to-sass">Pragmatic Guide to Sass</a></li>
+                    <li><a href="http://abookapart.com/products/sass-for-web-designers">SASS FOR WEB DESIGNERS</a></li>
+                    <li><a href="http://www.manning.com/netherland/">Sass and Compass in Action</a></li>
+                    <li><a href="http://sassandcompass.com/">Sass and Compass book</a></li>
+                </ul>
+			</div>
+		</div>
+
+
+
+
+	</div><!-- end body -->
+
+{% endblock %}
+{% block scripts %}
+    <script type="text/javascript" src="{% static "js/site.js" %}"></script>
+{% endblock %}

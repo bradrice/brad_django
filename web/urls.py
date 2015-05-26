@@ -14,4 +14,8 @@ urlpatterns = [
     url(r'^ckeditor/', include('ckeditor.urls')),
     url(r'^resume', TemplateView.as_view(template_name='resume.html')),
     url(r'^portfolio', TemplateView.as_view(template_name='portfolio.html')),
+    url(r'^sass-resources', TemplateView.as_view(template_name='sass-resources.html')),
+    url(r'^less-resources', TemplateView.as_view(template_name='less-resources.html')),
+    url(r'^color-resources', TemplateView.as_view(template_name='color-resources.html')),
+    url(r'^flex-resources', TemplateView.as_view(template_name='flex-resources.html')),
 ]

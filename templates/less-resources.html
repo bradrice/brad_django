@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+{% block title %}{{ title }}{% endblock %}
+{% block addedcss %}
+{% endblock %}
+{% block content %}
+<div id="body">
+		<div class="row">
+			<div class="panel intro_panel">
+			<p class="intro">Less is a css preprocessor written in javascript.</p>
+		</div>
+		</div>
+		<div class="row">
+			<div class="large-9 columns">
+			<h2>Less resources</h2>
+                <h3>Less on the web</h3>
+                <ul class="pbox">
+                    <li><a href="http://lesscss.org/">Less CSS</a></li>
+                    <li><a href="https://github.com/less/less.js">Less on Github</a></li>
+                    <li><a href="http://lesscssismore.com/s5lcdw/">LessCSS is More</a></li>
+                    <li><a href="https://scotch.io/tutorials/getting-started-with-less">Getting Started with Less</a></li>
+                    <li><a href="http://www.sitepoint.com/a-comprehensive-introduction-to-less/">A Comprehensive Introduction to LESS</a></li>
+                    <li><a href="https://www.npmjs.com/package/less">Less npm</a></li>
+                </ul>
+                <h3>Books on Less</h3>
+                <ul class="pbox">
+                    <li><a href="https://www.packtpub.com/books/content/less-css-preprocessor">Instant Less</a></li>
+                    <li><a href="https://www.packtpub.com/web-development/less-web-development-essentials">Less Web Development Essentials</a></li>
+                    <li><a href="https://www.packtpub.com/web-development/less-web-development-cookbook">Less Web Development Cookbook</a></li>
+                </ul>
+			</div>
+		</div>
+
+
+
+
+	</div><!-- end body -->
+
+{% endblock %}
+{% block scripts %}
+    <script type="text/javascript" src="{% static "js/site.js" %}"></script>
+{% endblock %}

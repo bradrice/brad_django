@@ -41,13 +41,9 @@
   <body class="zinnia {% block theme-class %}default{% endblock theme-class %} {% block color-class %}blue{% endblock color-class %} {% block sidebar-class %}right-sidebar{% endblock sidebar-class %} {% block body-class %}{% endblock body-class %}">
     <nav class="top-bar" data-topbar>
       <ul class="title-area">
-        <li class="name">
-          <h1>
-            <a href="{% url 'zinnia:entry_archive_index' %}" title="Zinnia's Weblog" rel="home">
-              Brad's Weblog
-            </a>
-          </h1>
-        </li>
+         <li class="name">
+      <h1><a href="/">Home</a></h1>
+    </li>
         <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
         <li class="toggle-topbar menu-icon">
           <a href="#">
@@ -85,10 +81,12 @@
             </a>
           </li>
         <li class="has-dropdown">
-        <a href="#">Code fragments</a>
+        <a href="#">Web resources</a>
         <ul class="dropdown">
           <li><a href="/sass-resources">SASS resources</a></li>
           <li><a href="/less-resources">Less resources</a></li>
+            <li><a href="/flex-resources">Flex resources</a></li>
+            <li><a href="/color-resources">Color resources</a></li>
         </ul>
       </li>
         </ul>
