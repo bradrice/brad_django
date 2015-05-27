@@ -1,13 +1,16 @@
-Django==1.8
-Pillow==2.8.1
 beautifulsoup4==4.3.2
-django-blog-zinnia==0.15.1
-django-ckeditor==4.4.7
-django-contrib-comments==1.6.0
-django-mptt==0.7.2
-django-tagging==0.3.4
+Django==1.8.2
+-e git://github.com/Fantomas42/django-blog-zinnia.git@6392047a5cf699cd2b617d59499a2be445b87e1e#egg=django_blog_zinnia-develop
+django-ckeditor==4.4.8
+django-contrib-comments==1.6.1
+django-mptt==0.7.3
+django-pygments==0.1
+django-tagging==0.3.6
 django-xmlrpc==0.1.5
-mots-vides==2015.2.6
+mots-vides==2015.5.11
+Pillow==2.8.1
+Pygments==2.0.2
 pyparsing==2.0.3
-pytz==2015.2
+pytz==2015.4
+zinnia-theme-foundation==1.0.1
 zinnia-wysiwyg-ckeditor==1.2

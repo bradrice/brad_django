@@ -134,7 +134,7 @@ CKEDITOR_CONFIGS = {
     'default': {
         'extraPlugins': 'codesnippet',
         'codeSnippet_theme': 'github',
-        'toolbar': 'Zzinnia',
+        'toolbar': 'Zinnia',
     },
     'zinnia-content': {
         'toolbar_Zinnia': [
