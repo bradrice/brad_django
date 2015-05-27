@@ -79,10 +79,10 @@ TEMPLATES = [
 ]
 
 TEMPLATE_CONTEXT_PROCESSORS = (
-  'django.contrib.auth.context_processors.auth',
-  'django.core.context_processors.i18n',
-  'django.core.context_processors.request',
-  'zinnia.context_processors.version',  # Optional
+    'django.contrib.auth.context_processors.auth',
+    'django.core.context_processors.i18n',
+    'django.core.context_processors.request',
+    'zinnia.context_processors.version',  # Optional
 )
 
 WSGI_APPLICATION = 'web.wsgi.application'
@@ -118,7 +118,7 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-STATICFILES_DIRS = (os.path.join(BASE_DIR), "static")
+STATIC_ROOT = '/Users/brad2/Sites/bradweb/web/static/'
 
 CKEDITOR_UPLOAD_PATH = "uploads/"
 
@@ -132,10 +132,9 @@ TEMPLATE_LOADERS = (
 
 CKEDITOR_CONFIGS = {
     'default': {
-        'toolbar': 'Zinnia',
         'extraPlugins': 'codesnippet',
-        "codeSnippet_theme": "monokai_sublime",
-            'skin': 'moono-dark',
+        'codeSnippet_theme': 'github',
+        'toolbar': 'Zzinnia',
     },
     'zinnia-content': {
         'toolbar_Zinnia': [
@@ -151,10 +150,8 @@ CKEDITOR_CONFIGS = {
              'Subscript', 'Superscript', '-', 'RemoveFormat'],
             ['NumberedList', 'BulletedList', '-',
              'Outdent', 'Indent', '-', 'Blockquote'],
-            ['Styles', 'Format'],
+            ['Styles', 'Format'], ['CodeSnippet'],
         ],
         'toolbar': 'Zinnia',
     },
 }
-
-

@@ -1,0 +1,13 @@
+Django==1.8
+Pillow==2.8.1
+beautifulsoup4==4.3.2
+django-blog-zinnia==0.15.1
+django-ckeditor==4.4.7
+django-contrib-comments==1.6.0
+django-mptt==0.7.2
+django-tagging==0.3.4
+django-xmlrpc==0.1.5
+mots-vides==2015.2.6
+pyparsing==2.0.3
+pytz==2015.2
+zinnia-wysiwyg-ckeditor==1.2
