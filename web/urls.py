@@ -3,6 +3,7 @@ from django.core.urlresolvers import reverse
 from django.contrib import admin
 from django.views.generic import TemplateView
 from .views import HomeView, ContactCreate
+from django.views.generic.base import RedirectView
 
 urlpatterns = [
     # Examples:
@@ -21,5 +22,5 @@ urlpatterns = [
     url(r'^demo/stickydemo', TemplateView.as_view(template_name='demos/sticky.html')),
     url(r'^lodigazebo', TemplateView.as_view(template_name='lodigazebo.html')),
     url(r'^contact', ContactCreate.as_view(), name="contact"),
-
+    url(r'^blog/dotcmsmaplists', RedirectView.as_view(url='http://bradrice.com/thoughts/posts/dotcms-map-lists', permanent=True)),
 ]
