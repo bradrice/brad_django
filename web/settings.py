@@ -48,7 +48,10 @@ INSTALLED_APPS = (
     'zinnia',
     'zinnia_ckeditor',
     'web',
+    'crispy_forms',
 )
+
+CRISPY_TEMPLATE_PACK = 'uni_form'
 
 MIDDLEWARE_CLASSES = (
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -118,7 +121,10 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-STATIC_ROOT = '/Users/brad2/Sites/bradweb/web/static/'
+
+STATICFILES_DIRS = (os.path.join(BASE_DIR), "static")
+
+#STATIC_ROOT = '/Users/bradrice/Sites/brad_django/web/static/'
 
 CKEDITOR_UPLOAD_PATH = "uploads/"
 

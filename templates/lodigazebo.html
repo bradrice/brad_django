@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+{% block title %}{{ title }}{% endblock %}
+{% block addedcss %}
+{% endblock %}
+{% block content %}
+
+
+    </div>
+    <div id="personal">
+		<div class="row">
+				<div class="large-12 columns">
+                    <h1>Own a unique piece of Lodi</h1>
+                    <h2>Limited edition, signed print of the Lodi Gazebo</h2>
+                    <h3>by Brad Rice</h3>
+                    <div class="imgarea">
+                        <img src="{%  static 'images/lodigazebo/gazebo_fin_17_21_web_sm.jpg' %}" class="shadow"/>
+                    </div>
+                    <p>Printed on archival quality paper using modern Giclee printing technology, this print quality will astound you. Add a piece of fine art to your walls.</p>
+                    <p>The print measures 16" x 20" with an approximate 3/8 inch border to allow for adhesive corners for mounting and matting. Mat and frame this print to your liking. I prefer 4 to 4 1/4 inch mat. If you use 4 1/4" for a mat the final frame size would be 24" x 28".</p>
+                    <p>Price: $65.00 + $4.39 tax + $5.00 shipping if applicable.</p>
+                    <p>Total cost with shipping: $74.38.</p>
+                    <p>Checks may be made out and sent to:<br/>
+                        Brad Rice<br />
+                        105 Evergreen Dr.<br/>
+                        Lodi, OH 44254</p>
+                    <p>Arrangements can be made to pick up your print, or provide shipping instructions.
+                    <p>I will also accept paypal payments</p>
+                    <p>
+                        <script async="async" src="https://www.paypalobjects.com/js/external/paypal-button.min.js?merchant=H8DL94XFT5HSL"
+    data-button="buynow"
+    data-name="Lodi Gazebo Print"
+    data-amount="65.00"
+    data-shipping="5.00"
+    data-tax="4.39"
+    data-callback="http://www.bradrice.com"
+></script>
+                    </p>
+				</div>
+        </div>
+    </div>
+{% endblock %}
+{% block scripts %}
+    <script type="text/javascript" src="{% static "js/site.js" %}"></script>
+
+{% endblock %}

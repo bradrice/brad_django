@@ -1,5 +1,9 @@
 from django.views.generic import TemplateView
 import random
+from django.views.generic.edit import CreateView
+from .models import Contact
+from .forms import ContactForm
+
 
 class HomeView(TemplateView):
 
@@ -21,4 +25,13 @@ class HomeView(TemplateView):
         context['p_list'] = self.build_dict(purple_list, 400)
         context['c_list'] = self.build_dict(color_list, 280)
         return context
+
+
+class ContactCreate(CreateView):
+    model = Contact
+    form_class = ContactForm
+    template_name = 'contact.html'
+
+    def dispatch(self, *args, **kwargs):
+        return super(ContactCreate, self).dispatch(*args, **kwargs)
 

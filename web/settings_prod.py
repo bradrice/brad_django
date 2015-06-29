@@ -48,7 +48,10 @@ INSTALLED_APPS = (
     'zinnia',
     'zinnia_ckeditor',
     'web',
+    'crispy_forms',
 )
+
+CRISPY_TEMPLATE_PACK = 'uni_form'
 
 MIDDLEWARE_CLASSES = (
     'django.contrib.sessions.middleware.SessionMiddleware',

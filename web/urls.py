@@ -2,7 +2,7 @@ from django.conf.urls import include, url
 from django.core.urlresolvers import reverse
 from django.contrib import admin
 from django.views.generic import TemplateView
-from .views import HomeView
+from .views import HomeView, ContactCreate
 
 urlpatterns = [
     # Examples:
@@ -19,4 +19,7 @@ urlpatterns = [
     url(r'^color-resources', TemplateView.as_view(template_name='color-resources.html')),
     url(r'^flex-resources', TemplateView.as_view(template_name='flex-resources.html')),
     url(r'^demo/stickydemo', TemplateView.as_view(template_name='demos/sticky.html')),
+    url(r'^lodigazebo', TemplateView.as_view(template_name='lodigazebo.html')),
+    url(r'^contact', ContactCreate.as_view(), name="contact"),
+
 ]
