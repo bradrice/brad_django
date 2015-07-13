@@ -4,12 +4,18 @@
 {% block addedcss %}
 {% endblock %}
 {% block content %}
-<form method="post" action="." data-parsley-validate="parsley">
-    {% csrf_token %}
-{% load crispy_forms_tags %}
-{% crispy form form.helper %}
+    <div class="row">
+        <div class="large-12 columns">
+            <h4>Contact me</h4>
+            <form method="post" action="." data-parsley-validate="parsley">
+            {% csrf_token %}
+            {% load crispy_forms_tags %}
+            {% crispy form form.helper %}
 
-</form>
+            </form>
+
+            </div>
+    </div>
 
 
 {% endblock %}

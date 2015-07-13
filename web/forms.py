@@ -9,6 +9,8 @@ class ContactForm(forms.ModelForm):
         model = Contact
         fields = ('first_name', 'last_name', 'email', 'message',)
 
+        first_name = forms.CharField(required=True)
+
     def __init__(self, *args, **kwargs):
         super(ContactForm, self).__init__(*args, **kwargs)
         self.helper = FormHelper()
@@ -16,12 +18,14 @@ class ContactForm(forms.ModelForm):
         self.helper.form_action = '.'
         self.helper.layout = Layout(
             Fieldset('Personal',
-            'first_name',
+            Field('first_name', css_class='my_class'),
             'last_name',
             'email',
+            css_class='large-12 columns'
         ),
             Fieldset('Message',
             'message',
+            css_class='large-12 columns'
             )
         )
-        self.helper.add_input(Submit("submit", "Send"))
+        self.helper.add_input(Submit("submit", "Send", css_class='button'))

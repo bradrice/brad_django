@@ -31,7 +31,9 @@ class ContactCreate(CreateView):
     model = Contact
     form_class = ContactForm
     template_name = 'contact.html'
+    success_url = '/contact/    '
 
     def dispatch(self, *args, **kwargs):
         return super(ContactCreate, self).dispatch(*args, **kwargs)
+
 
