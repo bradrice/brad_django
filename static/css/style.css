@@ -9340,3 +9340,8 @@ div#blog-sidebar {
 .entries-calendar td.entry {
   background-color: #ECF8CD;
 }
+
+/* line 173, ../scss/style.scss */
+pre {
+  margin: 1em 0px;
+}
