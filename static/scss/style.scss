@@ -88,8 +88,8 @@ header {
   @include justify-content(center);
   @include align-items(center);
   @include align-content(center);
-  background-color: $color-primary-1;
-  border-bottom: 16px dotted $color-primary-2;
+  background-color: #fff;
+  border-bottom: 1px dotted $color-primary-2;
   .site_head {
     margin: 1em;
   }
@@ -197,5 +197,9 @@ background: url(../images/teacup-bg.jpg) 50% 0 no-repeat fixed; min-height: 540p
 #soft {
   background-color: #e8dfef;
   min-height: 200px;
-    padding: 1em;
+  padding: 1em;
+}
+
+.top-bar-section ul li > a {
+  text-decoration: none;
 }
