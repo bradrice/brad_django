@@ -15,7 +15,7 @@ class ContactForm(forms.ModelForm):
         super(ContactForm, self).__init__(*args, **kwargs)
         self.helper = FormHelper()
         self.helper.form_method = 'post'
-        self.helper.form_action = '.'
+        self.helper.form_action = 'contact'
         self.helper.layout = Layout(
             Fieldset('Personal',
             Field('first_name', css_class='my_class'),
