@@ -9348,26 +9348,45 @@ pre {
 
 /* line 187, ../scss/style.scss */
 #cr {
-  background: url(../images/teapot-bg.jpg) 50% 50% no-repeat fixed;
+  background-image: url(../images/teapot-bg.jpg);
+  background-position: 50% 50px;
+  background-repeat: no-repeat;
+  position: relative;
   min-height: 400px;
   padding: 1em;
 }
 
-/* line 192, ../scss/style.scss */
+/* line 196, ../scss/style.scss */
 #tech {
-  background: url(../images/teacup-bg.jpg) 50% 0 no-repeat fixed;
+  background: url(../images/teacup-bg.jpg);
   min-height: 540px;
+  background-repeat: no-repeat;
+  position: relative;
   padding: 1em;
 }
 
-/* line 197, ../scss/style.scss */
+/* line 204, ../scss/style.scss */
 #soft {
   background-color: #e8dfef;
   min-height: 200px;
   padding: 1em;
 }
 
-/* line 203, ../scss/style.scss */
+/* line 210, ../scss/style.scss */
+#port {
+  background-color: #bbd776;
+  min-height: 100px;
+  padding: 1em;
+  position: relative;
+}
+
+/* line 217, ../scss/style.scss */
+#cs {
+  background-color: #fff7d3;
+  padding: 1em;
+}
+
+/* line 222, ../scss/style.scss */
 .top-bar-section ul li > a {
   text-decoration: none;
 }

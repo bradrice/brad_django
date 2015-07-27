@@ -12,9 +12,9 @@
                 </section>
 		</div>
 		</div>
-                <section id="cr" data-stellar-ratio="2">
+                <section id="cr" data-center-top="background-position: 50% 70%" data-top="background-position: 50% 20%">
                     <div class="row">
-                        <div class="medium-6 small-5 columns">
+                        <div class="medium-6 small-12 columns">
                             <h2>Current Experience</h2>
 				<p>The University of Akron <span class="times">February 2007 - Present</span><br />
 				302 Buchtel Common<br />
@@ -32,7 +32,7 @@
 		</div>
     </section>
 
-                <section id="tech">
+                <section id="tech" data-center-top="background-position: 50% 50%" data-top="background-position: 30% 20%"">
                     <div class="row">
 			<div class="large-9 columns">
                     <h2>Technical Expertise</h2>
@@ -54,22 +54,23 @@
 		</div>
                 </section>
 
-
-		<div class="row">
+                <section id="port" data-center-top="background-color: rgb(187, 215, 118)" data-top-top="background-color: rgb(247, 252, 235);">
+                    <div class="row">
 			<div class="large-9 columns">
-                <section id="port">
                     <h2>Interactive portfolio of sites</h2>
 				<ul>
-					<li><a href="portfolio">Portfolio</a></li>
+					<li><a class="button" href="portfolio">Portfolio</a></li>
 				</ul>
-                </section>
-			</div>
+                </div>
 		</div>
-		<div class="row">
-			<div class="large-9 columns">
+                </section>
+
+
                 <section id="re">
+                    <div class="row">
+			<div class="large-9 columns">
                     <div class="emp">
-                        <h2>Work Experience</h2>
+                        <h2>Previous Work Experience</h2>
 					<p>Freelance Artist <span class="times">1991 -1992</span><br />
 					<p><strong>Responsibilities:</strong> Art direction and production of advertising design.  Used a Macintosh
 	computer for advertising design, page layout and illustration.  Clients included area advertising agencies.</p>
@@ -85,18 +86,25 @@
 					Graphic Designer/ Illustrator<br/>
 					<strong>Responsibilities:</strong> Created graphics and illustration for both editorial and advertising </p>
 				</div>
-                </section>
-			</div>
+
+                </div>
 		</div>
-		<div class="row">
+                </section>
+
+                <section id="cs" data-center-top="background-color: rgb(228, 208, 126);" data-top-top="background-color: rbg(255, 247, 211);">
+                    <div class="row">
 			<div class="large-9 columns">
-                <section id="cs">
                     <h2>Community Service</h2>
 				<ul>
 					<li>Village of Lodi, Councilman since 2000</li>
 					<li>Board of Trustees member of Medina County District Library since 2012</li>
 				</ul>
-
+                </div>
+                        </div>
+                    </section>
+            <section id="ce">
+            <div class="row">
+			<div class="large-9 columns">
 				<h2>Continuing Education</h2>
 				<ul class="pbox">
 					<li>Thunder Lizard 3 day Photoshop conference - intense photoshop training with some of the best designers in the country</li>
@@ -104,8 +112,12 @@
 					<li>Penn State Web conference 2013 - all things web with an emphasis on mobile and responsive design.</li>
 					<li>Avid reader of technical books. My iPad is filled with ebooks for all kinds of technology</li>
 				</ul>
+                </div>
+                        </div>
                 </section>
 				<section id="se">
+                     <div class="row">
+			<div class="large-9 columns">
                     <h2>Speaking Engagements</h2>
                 <ul class="pbox">
                     <li>Penn State Web Conference 2015, Penn State University<br/>
@@ -114,16 +126,29 @@
                     <em><a href="http://www.slideshare.net/bradrice/brad-rice-content-4052359" target="_blank">Using Structured Data for Consistency in Web Content Management</a></em></li>
 
                     </ul>
+                    </div>
+		</div>
 				</section>
 
-			</div>
-		</div>
 	</div><!-- end body -->
 
 {% endblock %}
 {% block scripts %}
     <script type="text/javascript" src="{% static "js/site.js" %}"></script>
+    <script type="text/javascript" src="{% static 'lib/skrollr/dist/skrollr.min.js' %}"></script>
     <script>
-
+        ( function( $ ) {
+    // Init Skrollr
+    var s = skrollr.init({
+{#        render: function(data) {#}
+            //Debugging - Log the current scroll position.
+            //console.log(data.curTop);
+{#        }#}
+        mobileCheck: function() {
+                //hack - forces mobile version to be off
+                return false;
+            }
+    });
+} )( jQuery );
     </script>
 {% endblock %}
