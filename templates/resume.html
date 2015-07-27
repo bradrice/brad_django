@@ -7,28 +7,35 @@
 <div id="body">
 		<div class="row">
 			<div class="panel intro_panel">
-			<p class="intro"><img src="{% static 'images/BradRice.png' %}" alt="self" style="float: right; margin-left: 1em; border: 1px solid #5c585f;" />I focus on designing and building semantic web sites utilizing both creative and technical skills. Melding web development and design to allows me to craft user friendly and functional websites. I utilize creative design and cutting edge technology to provide emotional and enjoyable web experiences. Designing and developing for exceptional web experiences is my passion.</p>
+                <section id="int">
+                    <p class="intro"><img src="{% static 'images/BradRice.png' %}" alt="self" style="float: right; margin-left: 1em; border: 1px solid #5c585f;" />I focus on designing and building semantic web sites utilizing both creative and technical skills. Melding web development and design to allows me to craft user friendly and functional websites. I utilize creative design and cutting edge technology to provide emotional and enjoyable web experiences. Designing and developing for exceptional web experiences is my passion.</p>
+                </section>
 		</div>
 		</div>
-		<div class="row">
-			<div class="large-9 columns">
-				<h2>Current Experience</h2>
+                <section id="cr" data-stellar-ratio="2">
+                    <div class="row">
+                        <div class="medium-6 small-5 columns">
+                            <h2>Current Experience</h2>
 				<p>The University of Akron <span class="times">February 2007 - Present</span><br />
 				302 Buchtel Common<br />
 				Akron, OH 44325</p>
 				<p><strong>Responsibilities:</strong> Web Design. Site wide development utilizing html, css, and javascript. Work with individuals, departments and top level university sites. Design and develop web apps utilizing dotcms content management system as well as PHP traditional development.</p>
-			</div>
-		</div>
-		<div class="row">
+                        </div>
+                    </div>
+                </section>
+    <section id="soft">
+        <div class="row">
 			<div class="large-9 columns">
-				<h2>Software</h2>
+            <h2>Software</h2>
 				<p>Adobe Photoshop, Illustrator, InDesign, Microsoft Office, Quark XPress, Macromedia Flash, Dreamweaver, Fireworks, OmniGraffle as well as other graphic applications.</p>
 			</div>
 		</div>
+    </section>
 
-		<div class="row">
+                <section id="tech">
+                    <div class="row">
 			<div class="large-9 columns">
-				<h2>Technical Expertise</h2>
+                    <h2>Technical Expertise</h2>
 
 				<ul class="pbox">
 					<li>Design of Graphic User Interfaces, User Experience and Information Architecture</li>
@@ -43,27 +50,26 @@
 				<p>Special interest in the Mac OS X (Unix) operating system and have working experience in utilizing a Mac OS workstation. I have used Macintosh for over 25 years.
 					Knowledgeable of Windows and working in a Windows PC environment. Interest in Linux and virtual systems.
 				</p>
-			</div>
+                </div>
 		</div>
+                </section>
+
+
 		<div class="row">
 			<div class="large-9 columns">
-				<h2>Interactive portfolio of sites</h2>
+                <section id="port">
+                    <h2>Interactive portfolio of sites</h2>
 				<ul>
 					<li><a href="portfolio">Portfolio</a></li>
 				</ul>
+                </section>
 			</div>
 		</div>
 		<div class="row">
 			<div class="large-9 columns">
-				<div class="emp">
-					<h2>Related Experience</h2>
-					<p>HKM Direct Market Communications <span class="times">March 1992 – Feb. 2007</span><br />
-						5501 Cass Avenue, Cleveland, OH  44102<br />
-						Graphic Designer/Web Developer<p>
-					<p><strong>Responsibilities:</strong> Art director, creative designer and project manager for print and the Web. Meet with clients, sales, and customer service reps to map out and plan a project. Utilize multiple programs in Web development and design of Web applications: html, css, javascript, flash, .asp, php, perl and other programming languages. Developed a print on demand web to print system.  Maintain Web servers running Apache perl and php.</p>
-					<p>Clients include Bank One, Sherwin-Williams, University Hospitals, Key Bank, Parker Hannifin, Charter One, and many other accounts mostly in the area of direct market advertising. </p>
-				</div>
-				<div class="emp">
+                <section id="re">
+                    <div class="emp">
+                        <h2>Work Experience</h2>
 					<p>Freelance Artist <span class="times">1991 -1992</span><br />
 					<p><strong>Responsibilities:</strong> Art direction and production of advertising design.  Used a Macintosh
 	computer for advertising design, page layout and illustration.  Clients included area advertising agencies.</p>
@@ -79,11 +85,13 @@
 					Graphic Designer/ Illustrator<br/>
 					<strong>Responsibilities:</strong> Created graphics and illustration for both editorial and advertising </p>
 				</div>
+                </section>
 			</div>
 		</div>
 		<div class="row">
 			<div class="large-9 columns">
-				<h2>Community Service</h2>
+                <section id="cs">
+                    <h2>Community Service</h2>
 				<ul>
 					<li>Village of Lodi, Councilman since 2000</li>
 					<li>Board of Trustees member of Medina County District Library since 2012</li>
@@ -96,14 +104,18 @@
 					<li>Penn State Web conference 2013 - all things web with an emphasis on mobile and responsive design.</li>
 					<li>Avid reader of technical books. My iPad is filled with ebooks for all kinds of technology</li>
 				</ul>
-                <h2>Speaking Engagements</h2>
+                </section>
+				<section id="se">
+                    <h2>Speaking Engagements</h2>
                 <ul class="pbox">
                     <li>Penn State Web Conference 2015, Penn State University<br/>
-                    <a href="http://www.slideshare.net/bradrice/managing-responsive-websites-with-css-preprocessors" target="_blank">Design Responsive Websites using CSS3 Preprocessors</a></li>
+                    <a href="http://www.slideshare.net/bradrice/managing-responsive-websites-with-css-preprocessors" target="_blank"><em>Design Responsive Websites using CSS3 Preprocessors</em></a></li>
                     <li>OHECC (Ohio Higher Education Computing Conference) 2010, The University of Akron<br />
                     <em><a href="http://www.slideshare.net/bradrice/brad-rice-content-4052359" target="_blank">Using Structured Data for Consistency in Web Content Management</a></em></li>
 
                     </ul>
+				</section>
+
 			</div>
 		</div>
 	</div><!-- end body -->
@@ -111,4 +123,7 @@
 {% endblock %}
 {% block scripts %}
     <script type="text/javascript" src="{% static "js/site.js" %}"></script>
+    <script>
+
+    </script>
 {% endblock %}
